@@ -9,7 +9,7 @@
         "tencent",
         "dns"
     ],
-    "description": "",
+    "description": "DNS 解析云服务 SDK",
     "autoload": {
         "psr-4": {
             "Gemini\\DnsCloud\\": "src/"
@@ -21,7 +21,8 @@
         }
     },
     "require": {
-        "php": ">=8.0"
+        "php": ">=8.0",
+        "limingxinleo/aliyun-php-sdk-core": "^2.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.0",
