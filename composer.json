@@ -21,7 +21,8 @@
         }
     },
     "require": {
-        "php": ">=8.0"
+        "php": ">=8.0",
+        "hyperf/contract": "^3.0"
     },
     "require-dev": {
         "alibabacloud/alidns-20150109": "^3.0",
