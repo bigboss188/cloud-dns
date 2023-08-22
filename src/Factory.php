@@ -24,6 +24,13 @@ class Factory
 
     public function __construct(ConfigInterface $config)
     {
-        foreach ($config->get('dns_cloud', []) as $key => $value);
+        foreach ($config->get('dns_cloud', []) as $key => $value) {
+            $this->clients[$key] = new $value['client']($value);
+        }
+    }
+
+    public function get(string $key): ClientInterface
+    {
+        return $this->clients[$key];
     }
 }
