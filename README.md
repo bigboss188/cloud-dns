@@ -14,7 +14,11 @@ composer require gemini/dns-cloud
 php bin/hyperf.php vendor:publish gemini/dns-cloud
 ```
 
+各个平台都有对应的调试工具，如果不知道接口对应的事哪个 `Request`，则可以到调试工具里进行查询。
+
 ### 使用阿里云平台
+
+[文档](https://www.alibabacloud.com/help/zh/alibaba-cloud-dns/latest/api-alidns-2015-01-09-dir)
 
 安装组件
 
@@ -74,8 +78,9 @@ class IndexController extends Controller
 
 ```
 
-
 ### 使用腾讯云平台
+
+[文档](https://cloud.tencent.com/document/api/1427/56194)
 
 安装组件
 
