@@ -17,15 +17,19 @@ class ConfigProvider
     public function __invoke(): array
     {
         return [
-            'dependencies' => [
-            ],
-            'commands' => [
-            ],
             'annotations' => [
                 'scan' => [
                     'paths' => [
                         __DIR__,
                     ],
+                ],
+            ],
+            'publish' => [
+                [
+                    'id' => 'config',
+                    'description' => 'The config for dns-cloud.',
+                    'source' => __DIR__ . '/../publish/dns_cloud.php',
+                    'destination' => BASE_PATH . '/config/autoload/dns_cloud.php',
                 ],
             ],
         ];
