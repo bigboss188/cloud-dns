@@ -12,6 +12,10 @@ declare(strict_types=1);
 
 namespace HyperfTest\Cases;
 
+use AlibabaCloud\SDK\Alidns\V20150109\Alidns;
+use AlibabaCloud\SDK\Alidns\V20150109\Models\DescribeDnsProductInstancesRequest;
+use AlibabaCloud\SDK\Alidns\V20150109\Models\DescribeDnsProductInstancesResponse;
+use AlibabaCloud\Tea\Utils\Utils\RuntimeOptions;
 use Gemini\DnsCloud\Client\Aliyun\AliyunClient;
 use Gemini\DnsCloud\Factory;
 use Hyperf\Config\Config;
@@ -27,7 +31,6 @@ class AliyunTest extends AbstractTestCase
         $config = new Config([
             'dns_cloud' => [
                 'aliyun' => [
-                    'region_id' => '',
                     'access_key_id' => '',
                     'access_secret' => '',
                     'client' => AliyunClient::class,
@@ -38,5 +41,31 @@ class AliyunTest extends AbstractTestCase
         $factory = new Factory($config);
 
         $this->assertInstanceOf(AliyunClient::class, $factory->get('aliyun'));
+    }
+
+    public function testDescribeDnsProductInstancesWithOptions()
+    {
+        $this->markTestSkipped('暂时跳过');
+
+        $config = new Config([
+            'dns_cloud' => [
+                'aliyun' => [
+                    'access_key_id' => 'xx',
+                    'access_secret' => 'xx',
+                    'client' => AliyunClient::class,
+                ],
+            ],
+        ]);
+
+        $factory = new Factory($config);
+        $describeDnsProductInstanceRequest = new DescribeDnsProductInstancesRequest();
+        $runtime = new RuntimeOptions([]);
+
+        /** @var Alidns $client */
+        $client = $factory->get('aliyun')->client();
+
+        $res = $client->describeDnsProductInstancesWithOptions($describeDnsProductInstanceRequest, $runtime);
+
+        $this->assertInstanceOf(DescribeDnsProductInstancesResponse::class, $res);
     }
 }

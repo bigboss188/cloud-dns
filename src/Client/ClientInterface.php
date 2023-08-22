@@ -14,4 +14,5 @@ namespace Gemini\DnsCloud\Client;
 
 interface ClientInterface
 {
+    public function client(): mixed;
 }
