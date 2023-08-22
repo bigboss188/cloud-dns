@@ -14,6 +14,15 @@ composer require gemini/dns-cloud
 php bin/hyperf.php vendor:publish gemini/dns-cloud
 ```
 
+### 使用阿里云平台
+
+安装组件
+
+```shell
+composer require alibabacloud/darabonba-openapi
+composer require alibabacloud/alidns-20150109
+```
+
 设置环境变量
 
 ```dotenv
@@ -64,3 +73,13 @@ class IndexController extends Controller
 }
 
 ```
+
+
+### 使用腾讯云平台
+
+安装组件
+
+```shell
+composer require tencentcloud/dnspod
+```
+

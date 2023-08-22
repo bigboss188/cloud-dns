@@ -21,18 +21,19 @@
         }
     },
     "require": {
-        "php": ">=8.0",
-        "alibabacloud/alidns-20150109": "^3.0",
-        "alibabacloud/darabonba-openapi": "^0.2.9"
+        "php": ">=8.0"
     },
     "require-dev": {
+        "alibabacloud/alidns-20150109": "^3.0",
+        "alibabacloud/darabonba-openapi": "^0.2.9",
         "friendsofphp/php-cs-fixer": "^3.0",
         "hyperf/config": "^3.0",
         "hyperf/support": "^3.0",
         "mockery/mockery": "^1.0",
         "phpstan/phpstan": "^1.0",
         "phpunit/phpunit": ">=7.0",
-        "swoole/ide-helper": "^4.5"
+        "swoole/ide-helper": "^4.5",
+        "tencentcloud/dnspod": "^3.0"
     },
     "suggest": {
         "swow/swow": "Required to create swow components."
