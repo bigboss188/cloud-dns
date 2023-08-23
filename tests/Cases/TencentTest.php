@@ -16,8 +16,8 @@ use Gemini\DnsCloud\Client\Tencent\TencentClient;
 use Gemini\DnsCloud\Factory;
 use Hyperf\Config\Config;
 use TencentCloud\Dnspod\V20210323\DnspodClient;
-use TencentCloud\Dnspod\V20210323\Models\DescribeUserDetailRequest;
-use TencentCloud\Dnspod\V20210323\Models\DescribeUserDetailResponse;
+use TencentCloud\Dnspod\V20210323\Models\DescribeDomainListRequest;
+use TencentCloud\Dnspod\V20210323\Models\DescribeDomainListResponse;
 
 /**
  * @internal
@@ -44,13 +44,13 @@ class TencentTest extends AbstractTestCase
         $client = $factory->get('tencent')->client();
 
         // 实例化一个请求对象,每个接口都会对应一个request对象
-        $req = new DescribeUserDetailRequest();
+        $req = new DescribeDomainListRequest();
 
         $params = [];
         $req->fromJsonString(json_encode($params));
 
         // 返回的resp是一个DescribeUserDetailResponse的实例，与请求对象对应
-        $res = $client->DescribeUserDetail($req);
-        $this->assertInstanceOf(DescribeUserDetailResponse::class, $res);
+        $res = $client->DescribeDomainList($req);
+        $this->assertInstanceOf(DescribeDomainListResponse::class, $res);
     }
 }
