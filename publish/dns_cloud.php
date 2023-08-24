@@ -10,6 +10,7 @@ declare(strict_types=1);
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
 use Gemini\DnsCloud\Client\Aliyun\AliyunClient;
+use Gemini\DnsCloud\Client\Cloudflare\CloudflareClient;
 use Gemini\DnsCloud\Client\Tencent\TencentClient;
 
 use function Hyperf\Support\env;
@@ -24,5 +25,10 @@ return [
         'secret_id' => env('DNS_CLOUD_TENCENT_SECRET_ID'),
         'secret_key' => env('DNS_CLOUD_TENCENT_SECRET_KEY'),
         'client' => TencentClient::class,
+    ],
+    'cloudflare' => [
+        'email' => env('DNS_CLOUD_CLOUDFLARE_EMAIL'),
+        'api_key' => env('DNS_CLOUD_CLOUDFLARE_API_KEY'),
+        'client' => CloudflareClient::class,
     ],
 ];

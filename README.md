@@ -138,3 +138,59 @@ class IndexController extends Controller
 }
 
 ```
+
+### 使用 Cloudflare
+
+安装组件
+
+```shell
+composer require cloudflare/sdk
+```
+
+设置环境变量
+
+```dotenv
+DNS_CLOUD_CLOUDFLARE_EMAIL="xxx"
+DNS_CLOUD_CLOUDFLARE_API_KEY="xxx"
+```
+
+编写测试代码，我们直接把代码全部写到控制器里，开发者请按照实际情况酌情处理
+
+```php
+<?php
+
+declare(strict_types=1);
+/**
+ * This file is part of Hyperf.
+ *
+ * @link     https://www.hyperf.io
+ * @document https://hyperf.wiki
+ * @contact  group@hyperf.io
+ * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
+ */
+
+namespace App\Controller;
+
+use Cloudflare\API\Adapter\Guzzle;
+use Cloudflare\API\Endpoints\User;
+use Gemini\DnsCloud\Factory;
+use Hyperf\Di\Annotation\Inject;
+
+class IndexController extends Controller
+{
+    #[Inject]
+    protected Factory $factory;
+
+    public function index()
+    {
+        /** @var Guzzle $client */
+        $client = $this->factory->get('cloudflare')->client();
+        
+        $user = new User($client);
+
+        return $this->response->success($user->getUserID());
+    }
+}
+
+```
+
