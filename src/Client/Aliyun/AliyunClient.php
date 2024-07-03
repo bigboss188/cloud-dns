@@ -10,11 +10,11 @@ declare(strict_types=1);
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
 
-namespace Gemini\DnsCloud\Client\Aliyun;
+namespace Joba\CloudDns\Client\Aliyun;
 
 use AlibabaCloud\SDK\Alidns\V20150109\Alidns;
 use Darabonba\OpenApi\Models\Config;
-use Gemini\DnsCloud\Client\ClientInterface;
+use Joba\CloudDns\Client\ClientInterface;
 
 class AliyunClient implements ClientInterface
 {

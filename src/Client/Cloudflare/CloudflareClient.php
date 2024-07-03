@@ -10,11 +10,11 @@ declare(strict_types=1);
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
 
-namespace Gemini\DnsCloud\Client\Cloudflare;
+namespace Joba\CloudDns\Client\Cloudflare;
 
 use Cloudflare\API\Adapter\Guzzle;
 use Cloudflare\API\Auth\APIKey;
-use Gemini\DnsCloud\Client\ClientInterface;
+use Joba\CloudDns\Client\ClientInterface;
 
 class CloudflareClient implements ClientInterface
 {

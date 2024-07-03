@@ -14,8 +14,8 @@ namespace HyperfTest\Cases;
 
 use Cloudflare\API\Adapter\Guzzle;
 use Cloudflare\API\Endpoints\User;
-use Gemini\DnsCloud\Client\Cloudflare\CloudflareClient;
-use Gemini\DnsCloud\Factory;
+use Joba\CloudDns\Client\Cloudflare\CloudflareClient;
+use Joba\CloudDns\Factory;
 use Hyperf\Config\Config;
 
 /**

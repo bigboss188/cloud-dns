@@ -12,8 +12,8 @@ declare(strict_types=1);
 
 namespace HyperfTest\Cases;
 
-use Gemini\DnsCloud\Client\Tencent\TencentClient;
-use Gemini\DnsCloud\Factory;
+use Joba\CloudDns\Client\Tencent\TencentClient;
+use Joba\CloudDns\Factory;
 use Hyperf\Config\Config;
 use TencentCloud\Dnspod\V20210323\DnspodClient;
 use TencentCloud\Dnspod\V20210323\Models\DescribeDomainListRequest;

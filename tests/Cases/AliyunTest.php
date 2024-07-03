@@ -16,8 +16,8 @@ use AlibabaCloud\SDK\Alidns\V20150109\Alidns;
 use AlibabaCloud\SDK\Alidns\V20150109\Models\DescribeDnsProductInstancesRequest;
 use AlibabaCloud\SDK\Alidns\V20150109\Models\DescribeDnsProductInstancesResponse;
 use AlibabaCloud\Tea\Utils\Utils\RuntimeOptions;
-use Gemini\DnsCloud\Client\Aliyun\AliyunClient;
-use Gemini\DnsCloud\Factory;
+use Joba\CloudDns\Client\Aliyun\AliyunClient;
+use Joba\CloudDns\Factory;
 use Hyperf\Config\Config;
 
 /**

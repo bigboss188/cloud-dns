@@ -10,9 +10,9 @@ declare(strict_types=1);
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
 
-namespace Gemini\DnsCloud\Client\Tencent;
+namespace Joba\CloudDns\Client\Tencent;
 
-use Gemini\DnsCloud\Client\ClientInterface;
+use Joba\CloudDns\Client\ClientInterface;
 use TencentCloud\Common\Credential;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Profile\HttpProfile;

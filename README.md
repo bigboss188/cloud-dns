@@ -3,7 +3,7 @@
 ## 安装
 
 ```shell
-composer require gemini/dns-cloud
+composer require joba/cloud-dns
 ```
 
 ## 使用
@@ -11,7 +11,7 @@ composer require gemini/dns-cloud
 创建配置
 
 ```shell
-php bin/hyperf.php vendor:publish gemini/dns-cloud
+php bin/hyperf.php vendor:publish joba/cloud-dns
 ```
 
 各个平台都有对应的调试工具，如果不知道接口对应的事哪个 `Request`，则可以到调试工具里进行查询。
@@ -54,7 +54,7 @@ namespace App\Controller;
 use AlibabaCloud\SDK\Alidns\V20150109\Alidns;
 use AlibabaCloud\SDK\Alidns\V20150109\Models\DescribeDnsProductInstancesRequest;
 use AlibabaCloud\Tea\Utils\Utils\RuntimeOptions;
-use Gemini\DnsCloud\Factory;
+use Joba\CloudDns\Factory;
 use Hyperf\Di\Annotation\Inject;
 
 class IndexController extends Controller
@@ -112,7 +112,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-use Gemini\DnsCloud\Factory;
+use Joba\CloudDns\Factory;
 use Hyperf\Di\Annotation\Inject;
 use TencentCloud\Dnspod\V20210323\Models\DescribeUserDetailRequest;
 
@@ -173,7 +173,7 @@ namespace App\Controller;
 
 use Cloudflare\API\Adapter\Guzzle;
 use Cloudflare\API\Endpoints\User;
-use Gemini\DnsCloud\Factory;
+use Joba\CloudDns\Factory;
 use Hyperf\Di\Annotation\Inject;
 
 class IndexController extends Controller
@@ -193,4 +193,3 @@ class IndexController extends Controller
 }
 
 ```
-

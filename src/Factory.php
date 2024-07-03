@@ -10,9 +10,9 @@ declare(strict_types=1);
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
 
-namespace Gemini\DnsCloud;
+namespace Joba\CloudDns;
 
-use Gemini\DnsCloud\Client\ClientInterface;
+use Joba\CloudDns\Client\ClientInterface;
 use Hyperf\Contract\ConfigInterface;
 
 class Factory

@@ -9,9 +9,9 @@ declare(strict_types=1);
  * @contact  group@hyperf.io
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
-use Gemini\DnsCloud\Client\Aliyun\AliyunClient;
-use Gemini\DnsCloud\Client\Cloudflare\CloudflareClient;
-use Gemini\DnsCloud\Client\Tencent\TencentClient;
+use Joba\CloudDns\Client\Aliyun\AliyunClient;
+use Joba\CloudDns\Client\Cloudflare\CloudflareClient;
+use Joba\CloudDns\Client\Tencent\TencentClient;
 
 use function Hyperf\Support\env;
 
